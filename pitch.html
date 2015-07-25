@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+	<title></title>
+
+	<meta name="description" content=""/>
+	<meta name="author" content=""/>
+	<meta name="contact" content=""/>
+	<meta name="viewport" content="width=1024, user-scalable=no"/>
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="css/deck.core.css"/>
+	<link rel="stylesheet" href="css/extensions/deck.hash.css"/>
+	<link rel="stylesheet" href="css/extensions/deck.menu.css"/>
+	
+	<!-- Theme CSS files -->
+	<link rel="stylesheet" id="style-theme-link" href="css/style/swiss.css"/>
+
+	<!-- Custom CSS files -->
+	<link rel="stylesheet" href="js/sh/shCoreDefault.css"/>
+	<link rel="stylesheet" href="css/deck.custom.css"/>
+
+    <meta name="robots" content="noindex,nofollow"/>
+
+	<!-- JS files that must be included in the document head -->
+	<script src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+    <link href="syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="syntaxhighlighter_3.0.83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .glyphicon-play {
+            font-family: 'Glyphicons Halflings' !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 1 !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            float:right !important;
+            margin-right: 10% !important;
+        }
+        .glyphicon-pause {
+            font-family: 'Glyphicons Halflings' !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 1 !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            float:right !important;
+            margin-right: 10% !important;
+        }
+        
+        .color-cell {
+            width:33%;
+            height:33%;
+            opacity:0.2;
+        }
+
+        .intro-alert {
+            max-width:800px !important;
+            height:80% !important;
+            margin-left:auto !important;
+            margin-right:auto !important;
+            margin-top:5% !important;
+            padding:10px !important;
+            border: solid 3px darkslategray !important;
+        }
+
+        .expanded-alert {
+            max-width:800px !important;
+            height:80% !important;
+            margin-left:auto !important;
+            margin-right:auto !important;
+            margin-top:5% !important;
+            padding:10px !important;
+            border: solid 3px !important;
+        }
+    </style>
+    <script>
+        setInterval(function(){
+            var divs = $('.color-cell');
+            var div = divs[Math.floor(Math.random()*divs.length)];
+
+            var colors = [ 'red', 'blue', 'yellow', 'green', 'purple', 'orange', 'green', 'blue', 'purple', 'red' ];
+            var color = colors[Math.floor(Math.random()*colors.length)];
+            $(div).css('background-color',color);
+        },500);
+    </script>
+</head>
+<body class="deck-container" style="padding:0px;">
+    <div class="slide ui-corner-all" id="title-slide" style="width:100%;height:100%;background-image: url('images/aesop-logo.png');background-repeat: no-repeat; background-position: center center;background-size: auto 65%; top:0px; left:0px; border: solid 1px white;">
+        <div class="page-header" style="text-align:center;height:99%;">
+            <div style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;">
+                <div class="alert pull-left color-cell" style="background-color: red;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: orange;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: yellow;">
+
+                </div>
+                <div style="clear:both"></div>
+                <div class="alert pull-left color-cell" style="background-color: green;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: blue;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: purple;">
+
+                </div>
+                <div style="clear:both"></div>
+                <div class="alert pull-left color-cell" style="background-color: orange;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: purple;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: green;">
+
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all text-center" id="slide1" style="background: white;width:100%;height:100%">
+        <div class="alert alert-info intro-alert">
+            <h3 style="font-style:italic">presents</h3>
+            <img src="images/brune.gif" style="max-height:80%;margin-top:10px;">
+            <h4>A Massively Multi-Player Online<br/>Social Strategy City-Builder RPG Game</h4>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all text-center" id="slide1a" style="background: white;width:100%;height:100%">
+        <div class="alert alert-info text-left intro-alert">
+            <h3>Introduction</h3>
+            <p>Brunelleschi: Age of Architects (Brune) is an exciting online multiplayer game currently under development and on track to launch this fall.</p>
+            <div style="width:100%;text-align: center;margin-top:10px;">
+                <a target="_blank" href="http://www.digi-capital.com/reports"><img src="http://gamasutra.com/db_area/images/blog/234638/Games%20Revenue%20Forecast.PNG" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:80%"></a>
+            </div>
+            <p>The online gaming market is massive, with an enthusiastic global audience which is both growing all the time and constantly hungry for new gaming experiences.</p>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all text-center" id="slide1b" style="background: white;width:100%;height:100%">
+        <div class="alert alert-info text-left intro-alert" style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;padding:10px;">
+            <h3>Introduction</h3>
+            <p>The two biggest obstacles to new products in this market are the challenges of lengthy development times and the ability to self sustain after launch long enough for some of the many gaming communities to find and build a home in the new virtual environment.</p>
+            <div style="width:100%;text-align: center;margin-top:10px;">
+                <a target="_blank" href="https://brunegame.com"><img src="images/Avatars1.png" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:75%"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide2"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-info text-left intro-alert" style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;padding:10px;">
+                <h3>Introduction</h3>
+                <p>Brune has already conquered the first of these challenges, and has designed the game’s automatically expanding server usage and pricing structure to enable the completed project to self sustain indefinitely with minimal overhead.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com"><img src="images/players-vs-costs.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:90%;margin-top:10px;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3a"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:20px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-info text-left intro-alert" style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;padding:10px;">
+                <h3>Introduction</h3>
+                <p>Current products in the market focus on initial launch income rather than sustainable long term play, meaning games are rushed to market as mere accessories to their advertising campaigns, and leaving customers craving innovative game play perpetually dissatisfied.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com"><img src="images/PrivatePublicCivicEconomies1.png" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:80%;"></a>
+                </div>
+                <p>In contrast, Brune offers a rich depth and variety of experience to players.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3b"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:20px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-info text-left intro-alert" style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;padding:10px;">
+                <h3>Introduction</h3>
+                <p>Even without a feature complete offering, Brune has attracted the attention of a wide range of gamers, who follow development in anticipation of the final product.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com"><img src="images/greenlight.png" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:85%;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3c"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:20px; left:0px; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-warning text-left expanded-alert">
+                <h3>Expanded Information</h3>
+                <p>Brune is built on a foundation of open source software.  Using cutting edge components such as the Symfony2 framework, PHP5 (with plans to upgrade to PHP7 at launch), mediawiki, phpbb, and the open source community Brune has been able to create innovative game play experiences using a minimal budget and small development team.</p>
+                <div style="width:100%;text-align: center;margin-top:10px; padding-left:50px;">
+                    <a target="_blank" href="https://symfony.com/">
+                        <img src="images/symfony-small.png" class="ui-corner-all pull-left" style="max-height:180px;padding:10px;">
+                    </a>
+                    <a target="_blank" href="http://getcomposer.org">
+                        <img src="images/composer.png" class="ui-corner-all pull-left" style="max-height:180px;padding:10px;">
+                    </a>
+                    <a target="_blank" href="http://www.doctrine-project.org/">
+                        <img src="images/doctrine-logo.gif" class="ui-corner-all pull-left" style="max-height:180px;padding:10px;">
+                    </a>
+                    <a target="_blank" href="http://phpbb.com">
+                        <img src="images/phpbb.png" class="ui-corner-all pull-left" style="max-height:180px;padding:10px;">
+                    </a>
+
+                    <div style="clear:both"></div>
+
+                    <a target="_blank" href="https://mediawiki.org/">
+                        <img src="images/mediawiki-logo-300x232.png" class="ui-corner-all pull-left" style="max-height:180px;padding:10px;">
+                    </a>
+                    <a target="_blank" href="https://git-scm.com/">
+                        <img src="images/git_logo.png" class="ui-corner-all pull-left" style="max-height:180px;padding:10px;">
+                    </a>
+                    <a target="_blank" href="http://www.php.net">
+                        <img src="images/php-elephant.png" class="ui-corner-all pull-left" style="max-height:180px;padding:10px;">
+                    </a>
+                </div>
+                <div style="clear:both"></div>
+                <p style="position:relative; top: -10px;">
+                    This, combined with automatically expanding and contracting server usage through Digital Ocean or a similar service, will allow us to continue to improve, support, and maintain the product after launch with next to no overhead.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3d"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:20px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-warning text-left expanded-alert">
+                <h3>Expanded Information</h3>
+                <p>A game which attracts and serves some of the countless online gaming communities can be a lasting success.  Many such games see millions of players returning each month.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="http://www.gamesbrief.com/2014/09/beyond-the-microtransaction-how-players-spend/"><img src="images/cost-income.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:85%;"></a>
+                </div>
+                <div style="clear:both"></div>
+                <p style="position:relative; top: -10px;">
+                    Community appeal combined with automatically expanding and contracting server usage through Digital Ocean or a similar service, will allow us to continue to improve, support, and maintain the product after launch with sustainably low overhead.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3e"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%; top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-warning text-left expanded-alert">
+                <h3>Expanded Information</h3>
+                <p>Brune features a variety of features to attract and facilitate such communities within the game.  Communication and shared storytelling are made easy through integrated forums, mediawiki, and game messaging.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com/">
+                        <img src="images/MediaWiki5.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:100%;"></a>
+                </div>
+                <div style="clear:both"></div>
+                <p style="position:relative; top: -10px;">
+                    Characters within the game are able to form relationships, groups, and even coalitions between their settlements as they work together to build steadily expanding civilizations.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3f"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-warning text-left expanded-alert">
+                <h3>Expanded Information</h3>
+                <p>By facilitating these extant communities to take root in Brune, we accelerate the rate at which new players discover the product and increase the amount of time each player will remain engaged.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com/">
+                        <img src="images/ImportanceBonds3.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:75%;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3g"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-warning text-left expanded-alert">
+                <h3>Expanded Information</h3>
+                <p>One of the key elements to sustainable human happiness is satisfying the desire for self improvement.  Games which allow for the passive absorption of real world concepts through gameplay have long been a favorite among gamers.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com/">
+                        <img src="images/Research.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:95%;"></a>
+                </div>
+                <p>
+                    Brune accommodates this healthy human desire by offering fun interactive play rich with vocabulary, mathematics, and concepts from history, civics, tactics, economics, and more.
+                </p><br/>
+                <p>
+                    While never asking players to stop and solve a math problem or pass a pop quiz, simply playing the game rewards players with exposure to interesting ideas and real world mechanics, granting that precious sense of satisfaction that comes from learning new things.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3h"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-warning text-left expanded-alert">
+                <h3>Expanded Information</h3>
+                <p>For Example: Harvesting grain at a Farm, owning a Bakery which produces bread from grain, and pricing Bread sales on the markets for other players to purchase to eat for food bonuses or to sustain their troops are each simple fun interactions any player can have, but they also illustrate a production chain in an interactive way which leads to passively accumulated understanding.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com/">
+                        <img src="images/Currency.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:95%;"></a>
+                </div>
+                <p>Brune provides players a vast array of opportunities to explore, shape, and learn from their shared virtual world.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide4a"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+
+            <div class="alert alert-success text-left intro-alert">
+                <h3>Opportunity Details</h3>
+                <p>Aesop Games is offering 1% per $5,000 invested for up to 10% total ownership.  Percentage ownership would entitle holder to a percentage of net profits in proportion to their ownership.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="http://aesopgames.com/">
+                        <img src="images/InvestorIncome.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:95%;"></a>
+                </div>
+                <p>If a holder were interested in providing feedback in their area of expertise, such input would be welcome.</p>
+                <p>*Interested in outreach? Ask about our community profit sharing goals.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide4b"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%; top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+
+            <div class="alert alert-success text-left intro-alert">
+                <h3>Opportunity Details</h3>
+                <p>The first $4,000 raised will be used to cover server, electricity, and connectivity costs for the duration of development and for the initial game launch.</p>
+                <p>Funds raised between $4,000 and $10,000 will be used to advertise the product.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com/">
+                        <img src="images/FindWork.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:100%;"></a>
+                </div>
+                <p>Funds over $10,000 will enable us to hire a community manager to accelerate growth.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide4c"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+
+            <div class="alert alert-info text-left intro-alert">
+                <h3>Thank You</h3>
+                <p>Thank you for your time and attention.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com/">
+                        <img src="images/Voting4.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:85%;"></a>
+                </div>
+                <p>Please, let us know if you have any questions or feedback.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide ui-corner-all" id="slide4d" style="width:100%;height:100%;background-image: url('images/aesop-logo.png');background-repeat: no-repeat; background-position: center center;background-size: auto 65%; top:0px; left:0px; border: solid 1px white;">
+        <div class="page-header" style="text-align:center;height:99%;">
+            <div style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;">
+                <div class="alert pull-left color-cell" style="background-color: red;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: orange;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: yellow;">
+
+                </div>
+                <div style="clear:both"></div>
+                <div class="alert pull-left color-cell" style="background-color: green;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: blue;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: purple;">
+
+                </div>
+                <div style="clear:both"></div>
+                <div class="alert pull-left color-cell" style="background-color: orange;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: purple;">
+
+                </div>
+                <div class="alert pull-left color-cell" style="background-color: green;">
+
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+    <!-- Core JS and extension files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/deck.core.js"></script>
+<script src="js/extensions/deck.hash.js"></script>
+<script src="js/extensions/deck.menu.js"></script>
+<script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+
+<!-- Custom JS files -->
+<script src="js/deck.custom.js"></script>
+
+<!-- Activate deck.js and SyntaxHighlighter -->
+<script type="text/javascript">
+$(function() { $.deck('.slide'); });
+SyntaxHighlighter.all();
+</script>
+
+</body>
+</html>

@@ -42,6 +42,13 @@
     <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        body {
+            background-image: url('images/background.png');
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: auto 100%;
+        }
+
         .glyphicon-play {
             font-family: 'Glyphicons Halflings' !important;
             font-style: normal !important;
@@ -98,6 +105,7 @@
             var color = colors[Math.floor(Math.random()*colors.length)];
             $(div).css('background-color',color);
         },500);
+
     </script>
 </head>
 <body class="deck-container" style="padding:0px;">
@@ -171,9 +179,9 @@
         <div style="min-width:80%;height:100%;top:0px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
             <div class="alert alert-info text-left intro-alert" style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;padding:10px;">
                 <h3>Introduction</h3>
-                <p>Brune has already conquered the first of these challenges, and has designed the game’s automatically expanding server usage and pricing structure to enable the completed project to self sustain indefinitely with minimal overhead.</p>
+                <p>Brune has already conquered much of the first of these challenges, with the game's engine currently at more than 90% completion, a web client similarly near completion, and with mobile, graphic (PC and console), and VR clients already in playable pre alpha phases of development.</p>
                 <div style="width:100%;text-align: center;margin-top:10px;">
-                    <a target="_blank" href="https://brunegame.com"><img src="images/players-vs-costs.png" class="ui-corner-all" style="max-height:65%;background-color:white;width:90%;margin-top:10px;"></a>
+                    <a target="_blank" href="https://brunegame.com"><img src="images/32158_0_new%20Brune%20Menu%203.png" class="img-rounded" style="max-height:65%;background-color:white;width:90%;margin-top:10px;"></a>
                 </div>
             </div>
         </div>
@@ -185,7 +193,9 @@
                 <h3>Introduction</h3>
                 <p>Current products in the market focus on initial launch income rather than sustainable long term play, meaning games are rushed to market as mere accessories to their advertising campaigns, and leaving customers craving innovative game play perpetually dissatisfied.</p>
                 <div style="width:100%;text-align: center;margin-top:10px;">
-                    <a target="_blank" href="https://brunegame.com"><img src="images/PrivatePublicCivicEconomies1.png" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:80%;"></a>
+                    <a target="_blank" href="https://brunegame.com">
+                        <img src="images/BuildingUI.gif" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:80%;">
+                    </a>
                 </div>
                 <p>In contrast, Brune offers a rich depth and variety of experience to players.</p>
             </div>
@@ -198,7 +208,34 @@
                 <h3>Introduction</h3>
                 <p>Even without a feature complete offering, Brune has attracted the attention of a wide range of gamers, who follow development in anticipation of the final product.</p>
                 <div style="width:100%;text-align: center;margin-top:10px;">
-                    <a target="_blank" href="https://brunegame.com"><img src="images/greenlight.png" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:85%;"></a>
+                    <a target="_blank" href="https://brunegame.com"><img src="images/greenlight.png" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:95%;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3b1"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:20px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-info text-left intro-alert" style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;padding:10px;">
+                <h3>Introduction</h3>
+                <p>The playable in progress clients are already getting positive attention and reviews on a variety of indie gaming sites including indiedb.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="http://www.indiedb.com/games/brunelleschi/reviews"><img src="images/indiedb.png" class="ui-corner-all" style="max-height:65%;background-color:white;max-width:95%;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide ui-corner-all" id="slide3b2"  style="width:100%;height:100%;">
+        <div style="min-width:80%;height:100%;top:20px; left:0px; border: solid 1px white; padding-left:5%;padding-right:5%;margin-left:auto;margin-right:auto;">
+            <div class="alert alert-info text-left intro-alert" style="max-width:800px;height:80%; margin-left:auto;margin-right:auto;margin-top:5%;padding:10px;">
+                <h3>Introduction</h3>
+                <p>With your support, we will see a successful launch of the Brune web client this fall and be working to extend access to players through mobile, PC via the Steam marketplace, Oculus VR, and console clients including the Nintendo Wii U.</p>
+                <div style="width:100%;text-align: center;margin-top:10px;">
+                    <a target="_blank" href="https://brunegame.com">
+                        <img src="images/wii.png" class="img-rounded" style="max-height:65%;background-color:white;max-width:75%;">
+                        <img src="images/NintendoLogo1-620x250.jpg" class="img-rounded" style="max-height:65%;background-color:white;max-width:25%;position:relative; top: -30px;">
+                    </a>
                 </div>
             </div>
         </div>
@@ -408,7 +445,6 @@
 <script src="js/extensions/deck.hash.js"></script>
 <script src="js/extensions/deck.menu.js"></script>
 <script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
-
 <!-- Custom JS files -->
 <script src="js/deck.custom.js"></script>
 
@@ -416,6 +452,7 @@
 <script type="text/javascript">
 $(function() { $.deck('.slide'); });
 SyntaxHighlighter.all();
+
 </script>
 
 </body>
